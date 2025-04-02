@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Bonacci Pía</title>
+    <style>
+        /* style gral */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #a8abf5;
+            color: #333;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            padding-top: 70px;
+        }
+
+        /* menu */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #1e3a8a;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #a0c4ff;
+        }
+
+        /* header */
+        header {
+            background-color: #1e3a8a;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+        }
+        /* Bott modo oscuro */
+        #modo-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: 2px solid white;
+            padding: 8px 15px;
+            cursor: pointer;
+            color: white;
+            border-radius: 5px;
+            font-size: 18px;
+            z-index: 1001;
+        }
+        /* contenedor prin */
+        .contenedor {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        /* cajas */
+        .caja {
+            background-color: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .caja:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        /* ft perfil */
+        .foto {
+            width: 320px;
+        }
+        .foto-perfil {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            object-fit: cover;
+            height: 200px;
+        }
+        /* contacto */
+        .contacto {
+            width: 320px;
+        }
+        .contacto a {
+            color: #1e3a8a;
+            text-decoration: none;
+        }
+        .contacto a:hover {
+            text-decoration: underline;
+        }
+
+        /* proyectos */
+        .proyectos {
+            width: 100%;
+            max-width: 680px;
+        }
+        .proyecto {
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+        .proyecto:hover {
+            transform: scale(1.02);
+        }
+        .proyecto img {
+            width: 45%;
+            border-radius: 5%;
+            margin-bottom: 5%;
+        }
+
+        /* footer */
+        footer {
+            background-color: #1e3a8a;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+
+        /* modo oscuro */
+        .oscuro {
+            background-color: #080a2f;
+            color: #f9f9f9;
+        }
+        .oscuro nav {
+            background-color: #0a032c;
+        }
+        .oscuro header {
+            background-color: #0b0e40;
+        }
+        .oscuro .caja {
+            background-color: #0b0e40;
+            color: #f9f9f9;
+        }
+        .oscuro .contacto a {
+            color: #a0c4ff;
+        }
+        .oscuro #modo-toggle {
+            background-color: #0b0e40;
+            border-color: #f9f9f9;
+        }
+        .oscuro footer {
+            background-color: #0b0e40;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            body {
+                padding-top: 60px;
+            }
+            nav ul {
+                gap: 15px;
+            }
+            .contenedor {
+                flex-direction: column;
+                align-items: center;
+            }
+            .foto, .contacto {
+                width: 100%;
+                max-width: 500px;
+            }
+            #modo-toggle {
+                top: 15px;
+                right: 15px;
+                padding: 5px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Menú de navegación -->
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Botón modo oscuro -->
+    <button id="modo-toggle">🌙</button>
+
+    <!-- Header -->
+    <header id="inicio">
+        <h1>Ana Pía Bonacci Codeiro</h1>
+        <p>Estudiante en especialidad Informática | Futura Estudiante de Ciencias de la Computación</p>
+    </header>
+
+    <!-- Contenido principal -->
+    <section class="contenedor">
+        <!-- Foto de perfil -->
+        <div class="caja foto">
+            <img src="perfil.jpeg" alt="Mi Foto" class="foto-perfil">
+            <h2>Sobre Mí</h2>
+            <p>Estudiante apasionada por las ciencias exactas y la Tecnología. Actualmente cursando mi formación técnica en informática.</p>
+        </div>
+        
+        <!-- Contacto -->
+        <div class="caja contacto" id="contacto">
+            <h2>Contacto</h2>
+            <p>📧 Email: <a href="bonaccicodeiro@gmail.com">bonaccicodeiro@gmail.com</a></p>
+            <p>📱 Teléfono: +54 9 3457 632485</p>
+            <p>🔗 GitHub: <a href="https://github.com/piqipiqio" target="_blank">github.com/piqipiqio</a></p>
+        </div>
+        
+        <!-- Proyectos (ahora con 4 proyectos) -->
+        <div class="caja proyectos" id="proyectos">
+            <h2>Mis Proyectos Escolares</h2>
+            
+            <div class="proyecto">
+                <img src="hideway.jpg" alt="Proyecto 1">
+                <h3>The Hideway</h3>
+                <p>Pyme simulada de una sandwichería cultural. Me encargué del diseño de marca , creación de flyers promocionales y gestión de redes sociales. Desarrollé contenido visual coherente que reflejaba la identidad artística del local, aplicando herramientas de diseño como Illustrator y Canva.</p>
+            </div>
+            
+            <div class="proyecto">
+                <img src="phnix.jpg" alt="Proyecto 2">
+                <h3>PHNIX</h3>
+                <p>Empresa ficticia de soporte técnico y venta de hardware creada para la materia de Hardware. Diseñé el logo corporativo y desarrollé material gráfico para presupuestos, aplicando conocimientos técnicos sobre componentes de computadoras. El proyecto simulaba procesos reales de diagnóstico, cotizaciones y venta de insumos informáticos.</p>
+            </div>
+            
+            <div class="proyecto">
+                <img src="albura.jpg" alt="Proyecto 3">
+                <h3>ALBURA</h3>
+                <p>Aplicación personalizada para este emprendimiento de repostería, incluyendo: diseño de logo, sistema de cálculo de precios, calendario de pedidos y recetario interactivo (con CRUD). Implementamos una interfaz intuitiva basada en los colores de la marca y generé presupuestos automáticos para clientes.</p>
+            </div>
+            
+            <div class="proyecto">
+                <img src="git.png" alt="Proyecto 4">
+                <h3>Portafolio Digital</h3>
+                <p>Diseño y desarrollo de mi sitio portfolio personal, donde apliqué conocimientos frontend para crear una interfaz responsive con modo oscuro. Implementé desde cero la estructura HTML/CSS, efectos interactivos y diseño visual, reflejando mi identidad como futura técnica informática.</p>
+            </div>
+
+            <div class="proyecto">
+                <img src="nona.jpg" alt="Proyecto 5">
+                <h3>Nona Frola</h3>
+                <p>Plataforma web de recetas colaborativas. Me encargué del naming, diseño del logo y desarrollo del frontend, creando una interfaz intuitiva para que los usuarios publiquen, editen y den like a recetas con imágenes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Estudiante Técnico en Informática</p>
+        <p>© 2025 | Todos los derechos reservados</p>
+    
+    </footer>
+
+    <script>
+        // Modo oscuro con localStorage
+        const boton = document.getElementById("modo-toggle");
+        const guardarModo = () => {
+            if (document.body.classList.contains("oscuro")) {
+                localStorage.setItem("modo", "oscuro");
+                boton.textContent = "☀️";
+            } else {
+                localStorage.setItem("modo", "claro");
+                boton.textContent = "🌙";
+            }
+        };
+
+        // Cargar modo al iniciar
+        if (localStorage.getItem("modo") === "oscuro") {
+            document.body.classList.add("oscuro");
+            boton.textContent = "☀️";
+        }
+
+        // Alternar modo
+        boton.addEventListener("click", () => {
+            document.body.classList.toggle("oscuro");
+            guardarModo();
+        });
+    </script>
+</body>
+</html>
